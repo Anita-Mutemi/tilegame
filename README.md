@@ -23,7 +23,7 @@ To set up the Rocarstor car website, follow these steps:
 
 ## Design
 
-- ![](gameoverview.PNG)
+ ![](gameoverview.PNG)
 
 The design for the portfolio website can be found in the attached image.
 
