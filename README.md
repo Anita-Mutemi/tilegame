@@ -12,7 +12,7 @@ A tile matching game is a popular genre of puzzle game where the objective is to
 
 ## Installation
 
-To set up the Rocarstor car website, follow these steps:
+To set up the Tile Matching Game Board, follow these steps:
 
 1. Format the HTML file by including relevant elements cloned to css and html.
 2. Format the CSS file for the website's design.
@@ -23,13 +23,13 @@ To set up the Rocarstor car website, follow these steps:
 
 ## Design
 
- ![](gameoverview.PNG)
+ ![gameoverview](https://github.com/Anita-Mutemi/tilegame/assets/132679576/4602ba2c-b409-4c97-996e-4abfbcae362b)
 
-The design for the portfolio website can be found in the attached image.
+The design for the Tile Matching Game Board can be found in the attached image.
 
 ## Technologies Used
 
-The portfolio car website is built using custom HTML and CSS. The following languages and tools were used:
+The Tile Matching Game Board is built using custom HTML, JavaScript and CSS. The following languages and tools were used:
 
 - HTML5
 - CSS3
