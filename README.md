@@ -23,7 +23,7 @@ To set up the Tile Matching Game Board, follow these steps:
 
 ## Design
 
- ![gameoverview](https://github.com/Anita-Mutemi/tilegame/assets/132679576/4602ba2c-b409-4c97-996e-4abfbcae362b)
+![page-layout](https://github.com/Anita-Mutemi/tilegame/assets/132679576/c9fbd803-d825-4f23-b524-22e8bed3b8ed)
 
 The design for the Tile Matching Game Board can be found in the attached image.
 
