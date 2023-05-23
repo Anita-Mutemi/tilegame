@@ -115,6 +115,7 @@ const movesCounter = () => {
             <h4>Moves: ${movesCount}</h4>`;
               stopGame();
             }
+            //innerHTML
           } else {
           
             let [tempFirst, tempSecond] = [activeTile, secondTile];
