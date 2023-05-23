@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Click-match Memory Game</title>
-    <link href="index.css" type="text/css" rel="stylesheet"/>
+    <title>Tile Match Game Board</title>
+    <link  href="./index.css" rel="stylesheet"/>
   </head>
   <body>
     <div class="wrapper">
-      <div class="statistics">
-        <div id="movesCounter"></div>
-        <div id="timeContainer"></div>
+      <div class="analysis">
+        <div id="totalmoves"></div>
+        <div id="time"></div>
       </div>
-      <div class="tileContainer"></div>
-      <button id="stopButton" class="finish">stop Game</button>
+      <div class="overallTile"></div>
+      <button id="stopBox" class="finish">restart | stop</button>
     </div>
-    <div class="gameControlsContainer">
+    <div class="controlBox">
       <p id="resultParagraph"></p>
-      <button id="startButton">Start Game</button>
+      <button id="startBox">let's go!!</button>
     </div>
 
     <script src="index.js"></script>

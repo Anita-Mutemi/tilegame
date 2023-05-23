@@ -1,25 +1,25 @@
-
-const gameContainer = document.querySelector(".gameControlsContainer");
-const timeValue = document.getElementById("timeContainer");
-const stopButtonButton = document.getElementById("stopButton");
+const gameContainer = document.querySelector(".overallTile");
+const timeValue = document.getElementById("time");
+const stopButton = document.getElementById("stopBox");
 const result = document.getElementById("resultParagraph");
-const startButtonButton = document.getElementById("startButton");
-const controls = document.querySelector(".gameControlsContainer");
-const moves = document.getElementById("movesCounter");
+const startButton = document.getElementById("startBox");
+const controls = document.querySelector(".controlBox");
+const moves = document.getElementById("totalmoves");
+
 let tiles;
 let interval;
 let activeTile = false;
 let secondTile = false;
 
 const pictures = [
-    {name: "apples", image: "./tiles/apples.jpg"},
-    {name: "tangerine", image: "./tiles/tangerine.jpg"},
-    {name: "orange", image: "./tiles/orange.jpg"},
-    {name: "banana", image: "./tiles/banana.jpg"},
-    {name: "mixed_fruits", image: "./tiles/mixed_fruits.jpg"},
-    {name: "pineapple", image: "./tiles/pineapple.jpg"},
-   
-  ];
+  { name: "apples", image: "./tiles/apples.jpg" },
+  { name: "tangerine", image: "./tiles/tangerine.jpg" },
+  { name: "orange", image: "./tiles/orange.jpg" },
+  { name: "banana", image: "./tiles/banana.jpg" },
+  { name: "mixed_fruits", image: "./tiles/mixed_fruits.jpg" },
+  { name: "pineapple", image: "./tiles/pineapple.jpg" },
+ 
+];
 
 
 const generateRandom = (size = 4) => {
@@ -113,7 +113,7 @@ const movesCounter = () => {
             if (winCount == Math.floor(cardValues.length / 2)) {
               result.innerHTML = `<h2>You Won</h2>
             <h4>Moves: ${movesCount}</h4>`;
-              stopButtonGame();
+              stopGame();
             }
           } else {
           
@@ -155,7 +155,7 @@ const initializer = () => {
 };
 stopButton.addEventListener(
     "click",
-    (stopButtonGame = () => {
+    (stopGame = () => {
       controls.classList.remove("finish");
       stopButton.classList.add("finish");
       startButton.classList.remove("finish");
