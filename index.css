@@ -84,8 +84,8 @@
     color: rgb(245, 227, 193);
     margin: 18px auto 0 auto;
     background-color: rgb(236, 114, 240);
-    
   }
+  
   .controlBox button {
     font-size: larger;
   }
@@ -126,7 +126,7 @@
   #result h2 {
     font-size: larger;
   }
-  
+
   .finish {
     display: none;
   }
