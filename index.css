@@ -25,7 +25,7 @@
   }
   .analysis span {
     font-weight: 650;
-    font-size: large;
+    font-size: larger;
   }
   .card-container {
     position: relative;
@@ -54,7 +54,7 @@
   }
   .card-before {
     background-color: rgb(59, 3, 59);
-    font-size: 60px;
+    font-size: larger;
     font-weight: 650;
   }
   .tile-after {
@@ -80,7 +80,7 @@
   }
 
   #stopBox {
-    font-size: 20px;
+    font-size: larger;
     display: block;
     color: rgb(245, 227, 193);
     margin: 18px auto 0 auto;
@@ -88,7 +88,7 @@
     
   }
   .controlBox button {
-    font-size: 20px;
+    font-size: larger;
     
   }
 
@@ -104,7 +104,7 @@
     cursor: pointer;
   }
   #result h4 {
-    font-size: 30px;
+    font-size: larger;
     margin: 10px 0 15px 0;
   }
  
@@ -112,7 +112,7 @@
     text-align: center;
   }
   #result h2 {
-    font-size: 40px;
+    font-size: larger;
   }
   .finish {
     display: none;
