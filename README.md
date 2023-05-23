@@ -8,7 +8,7 @@ Tile Matching Game Board
 
 ## Description
 
-A tile matching game is a popular genre of puzzle game where the objective is to match tiles of the same type or pattern to clear them from the game board in order to win the game. There will be a card of 12 tiles in which two tiles are identical, the player needs to match each pair to win the game.
+A tile matching game is a popular genre of puzzle game where the objective is to match tiles of the same type or pattern to clear them from the game board in order to win the game. There will be a tile of 12 tiles in which two tiles are identical, the player needs to match each pair to win the game.
 
 ## Installation
 

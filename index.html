@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="30">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/9e90a31e76.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-    <title>Tile Matching Game Board</title>
-</head>
-<body>
-    <!--<div class="head">
-        <h1>CLICK-MATCH MEMORY GAME!!</h1>
-    </div>-->
-    <!--creating a container element-->
-    <div class="tileMatchingGame">
-        <div class="statisticscontainer">
-            <div id="movesCounter"></div>
-             <div id="timeContainer"></div>
-        </div>
-        <div class="gameContainer"></div>
-        <button id="stopButton" class="hideButton">Stop Playing</button>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click-match Memory Game</title>
+    <link  href="index.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="Wrapper">
+      <div class="statistics">
+        <div id="movesCounter"></div>
+        <div id="timeontainer"></div>
+      </div>
+      <div class="tileContainer"></div>
+      <button id="stopButton" class="finish">stop Game</button>
     </div>
-    <div class="controlsContainer">
-        <p id="resultParagaph"></p>
-        <button id="startButton">Let's Go!!</button>
+    <div class="gameControlsContainer">
+      <p id="resultParagraph"></p>
+      <button id="startButton">Start Game</button>
     </div>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
