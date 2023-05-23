@@ -24,7 +24,8 @@
     margin-bottom: 19px;
   }
   .analysis span {
-    font-weight: 600;
+    font-weight: 650;
+    font-size: large;
   }
   .card-container {
     position: relative;
