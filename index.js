@@ -1,42 +1,42 @@
-const gameContainer = document.querySelector(".tileContainer");
-const timeValue = document.getElementById("movesContainer");
-const stopButton = document.getElementById("stopButtonButton");
+
+const gameContainer = document.querySelector(".gameControlsContainer");
+const timeValue = document.getElementById("timeContainer");
+const stopButtonButton = document.getElementById("stopButton");
 const result = document.getElementById("resultParagraph");
-const startButton = document.getElementById("startButton");
+const startButtonButton = document.getElementById("startButton");
 const controls = document.querySelector(".gameControlsContainer");
 const moves = document.getElementById("movesCounter");
-
 let tiles;
 let interval;
 let activeTile = false;
 let secondTile = false;
 
 const pictures = [
-  { name: "apples", image: "./tiles/apples.jpg" },
-  { name: "tangerine", image: "./tiles/tangerine.jpg" },
-  { name: "orange", image: "./tiles/orange.jpg" },
-  { name: "banana", image: "./tiles/banana.jpg" },
-  { name: "mixed_fruits", image: "./tiles/mixed_fruits.jpg" },
-  { name: "pineapple", image: "./tiles/pineapple.jpg" },
- 
-];
+    {name: "apples", image: "./tiles/apples.jpg"},
+    {name: "tangerine", image: "./tiles/tangerine.jpg"},
+    {name: "orange", image: "./tiles/orange.jpg"},
+    {name: "banana", image: "./tiles/banana.jpg"},
+    {name: "mixed_fruits", image: "./tiles/mixed_fruits.jpg"},
+    {name: "pineapple", image: "./tiles/pineapple.jpg"},
+   
+  ];
 
 
 const generateRandom = (size = 4) => {
    
     let tempList = [...pictures];
    
-    let tileValues = [];
+    let cardValues = [];
    
     size = (size * 3) / 2;
    
     for (let i = 0; i < size; i++) {
       const randomIndex = Math.floor(Math.random() * tempList.length);
-      tileValues.push(tempList[randomIndex]);
+      cardValues.push(tempList[randomIndex]);
      
       tempList.splice(randomIndex, 1);
     }
-    return tileValues;
+    return cardValues;
   };
 
 let seconds = 0,
@@ -59,18 +59,18 @@ const timeGenerator = () => {
 };
 
 
-const matrixGenerator = (tileValues, size = 4) => {
+const matrixGenerator = (cardValues, size = 4) => {
   gameContainer.innerHTML = "";
-  tileValues = [...tileValues, ...tileValues];
+  cardValues = [...cardValues, ...cardValues];
   
-  tileValues.sort(() => Math.random() - 0.5);
+  cardValues.sort(() => Math.random() - 0.5);
   for (let i = 0; i < size * 3; i++) {
    
     gameContainer.innerHTML += `
-     <div class="tile-container" data-tile-value="${tileValues[i].name}">
-        <div class="tile-before">*</div>
+     <div class="card-container" data-card-value="${cardValues[i].name}">
+        <div class="card-before">*</div>
         <div class="tile-after">
-        <img src="${tileValues[i].image}" class="image"/></div>
+        <img src="${cardValues[i].image}" class="image"/></div>
      </div>
      `;
   }
@@ -82,25 +82,25 @@ const movesCounter = () => {
   
   gameContainer.style.gridTemplateColumns = `repeat(${4},auto)`;
   
-  tiles = document.querySelectorAll(".tileContainer");
-  tiles.forEach((tile) => {
-    tile.addEventListener("click", () => {
+  tiles = document.querySelectorAll(".card-container");
+  tiles.forEach((card) => {
+    card.addEventListener("click", () => {
      
-      if (!tile.classList.contains("matched")) {
+      if (!card.classList.contains("matched")) {
        
-        tile.classList.add("flipped");
+        card.classList.add("flipped");
        
         if (!activeTile) {
          
-          activeTile = tile;
+          activeTile = card;
          
-          activeTileValue = tile.getAttribute("data-tile-value");
+          activeTileValue = card.getAttribute("data-card-value");
         } else {
          
           movesCounter();
         
-          secondTile = tile;
-          let secondTileValue = tile.getAttribute("data-tile-value");
+          secondTile = card;
+          let secondTileValue = card.getAttribute("data-card-value");
           if (activeTileValue == secondTileValue) {
           
             activeTile.classList.add("matched");
@@ -110,7 +110,7 @@ const movesCounter = () => {
           
             winCount += 1;
           
-            if (winCount == Math.floor(tileValues.length / 2)) {
+            if (winCount == Math.floor(cardValues.length / 2)) {
               result.innerHTML = `<h2>You Won</h2>
             <h4>Moves: ${movesCount}</h4>`;
               stopButtonGame();
@@ -132,7 +132,7 @@ const movesCounter = () => {
 };
 
 startButton.addEventListener("click", () => {
-  movesCounter = 0;
+  movesCount = 0;
   seconds = 0;
   minutes = 0;
 
@@ -149,9 +149,9 @@ startButton.addEventListener("click", () => {
 const initializer = () => {
   result.innerText = "";
   winCount = 0;
-  let tileValues = generateRandom(4);
-  console.log(tileValues);
-  matrixGenerator(tileValues,4);
+  let cardValues = generateRandom(4);
+  console.log(cardValues);
+  matrixGenerator(cardValues,4);
 };
 stopButton.addEventListener(
     "click",
