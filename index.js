@@ -1,5 +1,5 @@
 const gameContainer = document.querySelector(".overallTile");
-const timeValue = document.getElementById("time");
+const timeValue = document.getElementById("timeFrame");
 const stopButton = document.getElementById("stopBox");
 const result = document.getElementById("resultParagraph");
 const startButton = document.getElementById("startBox");
