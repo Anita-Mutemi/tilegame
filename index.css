@@ -4,9 +4,11 @@
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
   }
+
   body {
     background-color: rgb(252, 119, 252);
   }
+
   .wrapper {
     position: absolute;
     box-sizing: content-box;
@@ -23,10 +25,17 @@
     text-align: center;
     margin-bottom: 19px;
   }
+  
+  .tile-after {
+    background-color: white;
+    transform: rotateY(180deg);
+  }
+  
   .analysis span {
     font-weight: 650;
     font-size: larger;
   }
+
   .card-container {
     position: relative;
     width: 150px;
@@ -34,12 +43,14 @@
     cursor: pointer;
     padding-top: 5px;
   }
+
   .overallTile {
     position: relative;
     display: grid;
     width: 100%;
     gap: 10px;
   }
+
   .card-before, .tile-after {
     display: flex;
     position: absolute;
@@ -52,31 +63,19 @@
     backface-visibility: hidden;
     align-items: center;
   }
+
   .card-before {
     background-color: rgb(59, 3, 59);
     font-size: larger;
     font-weight: 650;
   }
-  .tile-after {
-    background-color: white;
-    transform: rotateY(180deg);
-  }
+
   .card-container.flipped .card-before {
     transform: rotateY(180deg);
   }
+
   .card-container.flipped .tile-after {
     transform: rotateY(0deg);
-  }
-  .controlBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    background-color: plum;
-    position: absolute;
-    top: 0;
   }
 
   #stopBox {
@@ -89,7 +88,6 @@
   }
   .controlBox button {
     font-size: larger;
-    
   }
 
   .image{
@@ -103,17 +101,32 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
   #result h4 {
     font-size: larger;
     margin: 10px 0 15px 0;
   }
- 
+
+  .controlBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: plum;
+    position: absolute;
+    top: 0;
+  }
+
   #resultParagraph {
     text-align: center;
   }
+
   #result h2 {
     font-size: larger;
   }
+  
   .finish {
     display: none;
   }
